@@ -1,0 +1,28 @@
+.header{
+    background: var(--gray-700);
+    height: 196px;
+    display: flex;
+    /* centralizado horizontalmente */
+    justify-content: center;
+    /* centralizado verticalmente */
+    align-items: center; 
+    gap: 0.75rem;
+    
+}
+
+
+.todo{
+    display: flex;
+    font-size: 40px;
+}
+
+
+.to{
+    color: var(--blue);
+    font-weight: bold;
+}
+
+.do{
+    color: var(--purple-dark);
+    font-weight: bold;
+}
