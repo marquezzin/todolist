@@ -1,0 +1,46 @@
+.newTask{
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: -27px;
+}
+
+.newTask textarea{
+    height: 100%;
+    background: var(--gray-500);
+    width: 638px;
+    resize: none;
+    /* elemento textual centralizado */
+    padding: 1rem;
+    border-radius: 8px;
+    /* 2px é border-width(espessura:
+    ;solid é o border style de linha continua
+    var()  é a cor da borda */
+    border: 2px solid var(--gray-700);
+    /* cor do texto da textarea */
+    color: var(--gray-200);
+    overflow: hidden; /* Desativa o rolamento */
+}
+
+.click{
+    display: flex;
+    background: var(--blue-dark);
+    align-items: center;
+    border-radius:8px ;
+    height: 100%;
+    gap: 0.5rem;
+    padding: 1rem;
+
+}
+
+.click button{
+    background: transparent;
+    color: var(--gray-100);
+    cursor: pointer;
+}
+
+.click img{
+    height: 1rem;
+}
