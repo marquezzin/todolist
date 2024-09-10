@@ -1,5 +1,6 @@
 import { NewTask } from './componentes/NewTask'
 import { Header } from './componentes/Header'
+import { TaskSpace } from './componentes/TaskSpace'
 import './global.css'
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
       <div>
         <Header/>
         <NewTask/>
+        <TaskSpace/>
       </div>
     )
 }

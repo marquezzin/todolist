@@ -1,0 +1,12 @@
+.info{
+    /* nao defino altura e largura para que ela possa esticar
+    quando tiver conteudo */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4rem;
+    margin-left: 22rem;
+    margin-right: 22rem;
+}
+
+
