@@ -8,12 +8,11 @@ export function NewTask(){
                 name="addTask"
                 placeholder="Adicione uma nova tarefa"
                 />
-            <div className={styles.click}>
-            <button type='submit'>
-                Criar
-            </button>
+         
+        <button className={styles.click} type='submit'>
+            <p>Criar</p>
             <img src={pluslogo} alt="plus" />
-            </div>
+        </button>
         </div>
 
     )

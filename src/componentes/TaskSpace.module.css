@@ -9,4 +9,20 @@
     margin-right: 22rem;
 }
 
+.created{
+    display: flex;
+    gap: 0.5rem;
+}
 
+.created p{
+    color: var(--blue);
+}
+
+.completed{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.completed p{
+    color: var(--blue);
+}

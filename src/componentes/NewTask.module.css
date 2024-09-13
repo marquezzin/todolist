@@ -34,13 +34,10 @@
     gap: 0.5rem;
     padding: 1rem;
     cursor: pointer;
-
 }
 
-.click button{
-    background: transparent;
+.click p{
     color: var(--gray-100);
-
 }
 
 .click img{
