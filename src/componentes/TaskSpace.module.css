@@ -9,20 +9,55 @@
     margin-right: 22rem;
 }
 
-.created{
+.created, .completed {
     display: flex;
     gap: 0.5rem;
+    align-items: center;
 }
 
-.created p{
+.created p {
     color: var(--blue);
 }
 
-.completed{
-    display: flex;
-    gap: 0.5rem;
+.created span, .completed span {
+    color: var(--gray-200);
+    border-radius: 999px;
+    background: var(--gray-400);
+    /* 2 vertical e 8 horizontal */
+    padding: 2px 8px;
 }
+
 
 .completed p{
-    color: var(--blue);
+    color: var(--purple);
+}
+
+.boxEmpty{
+    /* nao defino altura e largura para que ela possa esticar
+    quando tiver conteudo */
+    margin-top: 1.5rem;
+    margin-left: 22rem;
+    margin-right: 22rem;
+    display: flex;
+    /* padrao é flex direction: row; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 10px 0 0; /* Superior esquerdo, superior direito, inferior direito, inferior esquerdo */
+    border: 1px solid var(--gray-400);
+    border-bottom: none; /* Remove a borda inferior */
+    border-right: none; /* Remove a borda inferior */
+    border-left: none; /* Remove a borda esquerda */
+}
+.boxEmpty img{
+    padding-top: 4rem;
+}
+
+.boxEmpty p{
+    color: var(--gray-300);
+}
+
+.bold{
+    padding-top: 1rem;
+    font-weight: bold;
 }

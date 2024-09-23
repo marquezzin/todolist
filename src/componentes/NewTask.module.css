@@ -18,7 +18,7 @@
     /* 2px é border-width(espessura:
     ;solid é o border style de linha continua
     var()  é a cor da borda */
-    border: 2px solid var(--gray-700);
+    border: 1px solid var(--gray-700);
     /* cor do texto da textarea */
     color: var(--gray-200);
     overflow: hidden; /* Desativa o rolamento */
