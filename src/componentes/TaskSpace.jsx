@@ -15,9 +15,10 @@ export function TaskSpace(){
         setTasks([...tasks, { text: newTask, completed: false }]); //desestruturação, task com text e completed
     }
 
-    function taskCompletion(index) {
+    function taskCompletion(index) { //filter nao serve pois ia apenas filtrar,nao repetindo as tasks incompletas
         const updatedTasks = tasks.map((task, i) =>
-          i === index ? { ...task, completed: !task.completed } : task
+          i === index ? { ...task , completed: !task.completed } : task //se for do indice,altera o completed, se não for, apenas copia a task
+                        //...task para copiar as propriedades, no caso text;
         );
         setTasks(updatedTasks);
       }
@@ -25,11 +26,11 @@ export function TaskSpace(){
         const updatedTasks = tasks.filter((_, i) => i !== index);
         setTasks(updatedTasks);
     }
-
+    
     return(
-        
         <div>
-            <NewTask onAddTask={handleAddTask} />
+            {/* Passando a função de adicionar tarefa para o componente NewTask por meio de sua propriedade onAddTask*/}
+            <NewTask onAddTask={handleAddTask} /> {/*primeiro renderiza o componente NewTask*/}
             <header className={styles.info}>
                 <div className={styles.created}>
                     <p>Tarefas criadas</p>
@@ -40,12 +41,11 @@ export function TaskSpace(){
                     <span>{tasks.filter(task => task.completed).length} de {tasks.length}</span>
                 </div>
             </header>
-            {/* Passando a função de adicionar tarefa para o componente NewTask */}
+            
             
             
             {tasks.length === 0 ? (
                 <div className={styles.boxEmpty}>
-                    {/* if tasks == 0 */}
                     <img src={clipboard} alt="clipboard" />
                     <p className={styles.bold}>Você ainda não tem tarefas cadastradas</p>
                     <p>Crie tarefas e organize seus itens a fazer</p>
@@ -53,14 +53,14 @@ export function TaskSpace(){
                     <ul className={styles.taskList}>
                     {tasks.map((task, index) => (
                         <li key={index} className={task.completed ? styles.completedTask : styles.incompletedTask}>
-                            <div className={task.completed ? styles.completedCheckbox : styles.incompletedCheckbox}
-
-                                onClick={() => taskCompletion(index)} //clicando na checkbox
-                            >{task.completed ? (
-                                <img src={check} alt="check" /> // Ícone de verificado como SVG
-                            ) : (
-                                <img src={bluecheck} alt="bluecheck" /> // Ícone para tarefas incompletas
-                            )}
+                            <div className={styles.checkbox} onClick={() => taskCompletion(index)}>  
+                            {/* com ()=> ... está criando uma função anônima que será executada apenas quando o evento onClick for disparado, se não o tivesse
+                            ele ia ser disparado assim quando a div fosse renderizada */}
+                                {task.completed ? (
+                                    <img src={check} alt="check" /> // Ícone para tarefas completas
+                                ) : (
+                                    <img src={bluecheck} alt="bluecheck" /> // Ícone para tarefas incompletas
+                                )}
                             </div>
                             <span className={task.completed ? styles.completedText : styles.incompletedText}>{task.text}</span>
                             <button className={styles.trash} onClick={() => handleDeleteTask(index)}>

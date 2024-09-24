@@ -8,6 +8,9 @@
     width: 46rem; /* Largura da div */
     margin-left: auto; /* Centraliza a div na página */
     margin-right: auto; /* Centraliza a div na página */
+    /* O valor auto faz com que o navegador distribua automaticamente a margem restante igualmente entre o lado esquerdo e o lado direito do elemento. */
+    /* O espaço restante é dividido igualmente entre a margem esquerda e a margem direita, centralizando o elemento no eixo horizontal. */
+    /* Isso só funciona corretamente quando o elemento tem uma largura definida, como no nosso caso, onde a div possui width: 46rem */
 }
 
 .created, .completed {
@@ -21,7 +24,7 @@
 }
 
 .created span, .completed span {
-    color: var(--gray-200);
+    color: var(--gray-200); 
     font-size: 0.75rem;
     border-radius: 999px;
     background: var(--gray-400);
@@ -65,16 +68,18 @@
     font-weight: bold;
 }
 
-.taskList{
+/* div(ul) que engloba as listas (li) */
+.taskList{ 
     margin-top: 1.5rem;
     margin-left: auto; /* Centraliza a div na página */
     margin-right: auto; /* Centraliza a div na página */
     display: flex;
     /* padrao é flex direction: row; */
     gap: 0.75rem;
+    /* distancia entre os filhos(li) */
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center;  nao precisa*/
     width: 46rem;
     padding: 0;
 }
@@ -87,6 +92,7 @@
     display: flex;
     gap: 0.75rem;
     justify-content: space-between;
+    /* alinhamento vertical */
     align-items: center;
     padding: 1rem;
 }
@@ -104,7 +110,7 @@
 
 
 
-.completedCheckbox,.incompletedCheckbox{
+.checkbox{
     cursor: pointer;
 }
 
@@ -122,6 +128,5 @@
 .trash{
     background: none;
     cursor: pointer;
-    color: var(--blue);
 }
 
