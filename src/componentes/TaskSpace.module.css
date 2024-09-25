@@ -121,13 +121,13 @@
     font-size: 14px;
     color: var(--gray-300);
     text-decoration: line-through;
-    max-width: 624px;
+    max-width: 86%; /* 632(tamanho do texto) / 736(tamanho da div)*/  
     overflow-wrap: break-word; /* Garante a quebra de palavras longas (que ultrapassem o limite de largura) */  
 }
 .incompletedText{
     font-size: 14px;
     color: var(--gray-100);
-    max-width: 624px;
+    max-width: 86%; /* 632/736*/
     overflow-wrap: break-word; /* Garante a quebra de palavras longas (que ultrapassem o limite de largura) */
     
     
